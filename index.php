@@ -6,7 +6,7 @@ function adminer_object()
   {
     function credentials()
     {
-      return ['db', 'root', '1'];
+      return [getenv('DB_HOST'), getenv('DB_USER'), getenv('DB_PASS')];
     }
   }
   return new CustomDatabase;
